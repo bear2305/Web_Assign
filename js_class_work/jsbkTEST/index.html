@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="colorbtn" id="colorbtn">Change background colour</button>
+    
+    <script>
+        // FIX 3: Changed document.getElementById('colorbtn') to match the new 'id' attribute on the button.
+        // Also changed 'btn' declaration from 'let' to 'const' as the reference won't change.
+        const btn = document.getElementById('colorbtn');
+        
+        // FIX 4: Changed 'click' to the string 'click' and removed the space between 'click' and 'function'.
+        btn.addEventListener('click', function() {
+            const randomColor = `rgb(
+                ${Math.floor(Math.random() * 256)},
+                ${Math.floor(Math.random() * 256)},
+                ${Math.floor(Math.random() * 256)})`;
+        
+            document.body.style.backgroundColor = randomColor;
+        });
+    </script>
+</body>
+</html>
