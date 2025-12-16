@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+.container { 
+    background-color:white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgb(0, 0, 0, 0.9);
+    width: 450px;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #0f0e0b;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #09060f;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"]
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+input.invalid,
+select.invalid {
+    border-color: #e74c3c;
+}
+.error {
+    color: #e74c3c;
+    font-size: 0.9em;
+    margin-top: 5px;
+    display: block;
+}
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+.checkbox-items {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 10px;
+}
+button::hover {
+    background-color: #219a52;
+}
+#success-message {
+    color: #27ae60;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1.1em;
+    display: none;
+}
+
+

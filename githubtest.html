@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects Portfolio</title>
+    <style>
+        /* Basic Reset and Global Styles */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f9; /* Light background */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Header Styling */
+        header {
+            text-align: center;
+            padding-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 3em;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        /* Project Grid */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        /* Project Card Styling */
+        .project-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none; /* Important for making the whole card a link/target */
+            color: inherit;
+            display: block;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Screenshot Area */
+        .screenshot-area {
+            height: 200px; /* Fixed height for consistent cards */
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ecf0f1; /* Placeholder background color */
+        }
+
+        .screenshot-area img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures image covers the area without distortion */
+            transition: transform 0.5s ease;
+            cursor: pointer; /* Indicates clickability */
+        }
+
+        .project-card:hover .screenshot-area img {
+            transform: scale(1.05);
+        }
+
+        /* Content Area */
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-content h3 {
+            color: #3498db;
+            margin-top: 0;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .project-content p {
+            font-size: 0.95em;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        /* Call-to-Action Button */
+        .btn-view {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-view:hover {
+            background-color: #2980b9;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid #ddd;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>My Portfolio Projects</h1>
+            <p>A collection of my recent work in web development and design.</p>
+        </header>
+
+        <section class="project-grid">
+
+            <a href="Student%20Innovation/index.html" class="project-card" target="_blank">
+                <div class="screenshot-area">
+                    <img src="images/p1.png" alt="Screenshot of Project 1: Personal Blog">
+                </div>
+                <div class="project-content">
+                    <h3>An Event registration page</h3>
+                    <p>An innovation competition page , using only html & CSS page</p>
+                    <span class="btn-view">View Project</span>
+                </div>
+            </a>
+
+            <a href="project/Banahene%20Emmanuel%20Adamnor/index.html" class="project-card" target="_blank">
+                <div class="screenshot-area">
+                    <img src="images/p2.png" alt="Screenshot of Project 2: E-commerce Mockup">
+                </div>
+                <div class="project-content">
+                    <h3>A profile page for a friend </h3>
+                    <p>It uses the <b>table</b> tag for the page layout.<br/>Only <b>html</b> used</p>
+                    <span class="btn-view">View Project</span>
+                </div>
+            </a>
+
+            <a href="project/LOGIN/login.html" class="project-card" target="_blank">
+                <div class="screenshot-area">
+                    <img src="images/p3.png" alt="Screenshot of Project 3: To-Do App">
+                </div>
+                <div class="project-content">
+                    <h3>A login page</h3>
+                    <p>This is a simple Login page. Only html & CSS</p>
+                    <span class="btn-view">View Project</span>
+                </div>
+            </a>
+            <a href="project/my%20profile/index.html" class="project-card" target="_blank">
+                <div class="screenshot-area">
+                    <img src="images/p4.png" alt="Screenshot of Project 3: To-Do App">
+                </div>
+                <div class="project-content">
+                    <h3>My profile </h3>
+                    <p>A simple html & css Profile page with the application of display <b>grid</b> for the layout  & <b>flex</b> for centering</p>
+                    <span class="btn-view">View Project</span>
+                </div>
+            </a>            
+            
+            <a href="project1/index.html" class="project-card" target="_blank">
+                <div class="screenshot-area">
+                    <img src="images/p5.png" alt="Screenshot of Project 3: To-Do App">
+                </div>
+                <div class="project-content">
+                    <h3>Two numbers Addition calculator</h3>
+                    <p>It accept both float and integer. Javascript Addition Logic was implemented </p>
+                    <span class="btn-view">View Project</span>
+                </div>
+            </a>            
+            
+            <a href="webassign/web%201/project%201/index.html" class="project-card" target="_blank">
+                <div class="screenshot-area">
+                    <img src="images/p6.png" alt="Screenshot of Project 3: To-Do App">
+                </div>
+                <div class="project-content">
+                    <h3>An animation of the word<b> "student"</b></h3>
+                    <p> It a moving wave of the word student </p>
+                    <span class="btn-view">View Project</span>
+                </div>
+            </a>
+            <a href="webassign/web%201/project%202/index.html" class="project-card" target="_blank">
+                <div class="screenshot-area">
+                    <img src="images/p7.png" alt="Screenshot of Project 3: To-Do App">
+                </div>
+                <div class="project-content">
+                    <h3>A coloured boxes</h3>
+                    <p>A simple, coloured <b>div</b> tags positioned into the center, using css <b>flex</b> property</p>
+                    <span class="btn-view">View Project</span>
+                </div>
+            </a>
+            <a href="webassign/web%201/project%203/index.html" class="project-card" target="_blank">
+                <div class="screenshot-area">
+                    <img src="images/p8.png" alt="Screenshot of Project 3: To-Do App">
+                </div>
+                <div class="project-content">
+                    <h3>A web page made with semantics</h3>
+                    <p>It a simple, web page using the html semantics elements</p>
+                    <span class="btn-view">View Project</span>
+                </div>
+            </a>
+            <a href="webassign/web%202/index.html" class="project-card" target="_blank">
+                <div class="screenshot-area">
+                    <img src="images/p9.png" alt="Screenshot of Project 3: To-Do App">
+                </div>
+                <div class="project-content">
+                    <h3>A trial web page</h3>
+                    <p>This is my  first webpage  in which, i combined all my knowledge in js,css & html </p>
+                    <span class="btn-view">View Project</span>
+                </div>
+            </a>
+            <a href="webassign/web%203/index.html" class="project-card" target="_blank">
+                <div class="screenshot-area">
+                    <img src="images/p10.png" alt="Screenshot of Project 3: To-Do App">
+                </div>
+                <div class="project-content">
+                    <h3>A simple javasript trial page</h3>
+                    <p>It a small form , created with only javascript and html</p>
+                    <span class="btn-view">View Project</span>
+                </div>
+            </a>
+            <a href="webassign/web%204/Project%201/index.html" class="project-card" target="_blank">
+                <div class="screenshot-area">
+                    <img src="images/p11.png" alt="Screenshot of Project 3: To-Do App">
+                </div>
+                <div class="project-content">
+                    <h3>A calculator App</h3>
+                    <p>This is a full functional calcuator app, with javascript</p>
+                    <span class="btn-view">View Project</span>
+                </div>
+            </a>
+            <a href="webassign/web%204/Project%202/index.html" class="project-card" target="_blank">
+                <div class="screenshot-area">
+                    <img src="images/p12.png" alt="Screenshot of Project 3: To-Do App">
+                </div>
+                <div class="project-content">
+                    <h3>An E-commerce shopping page</h3>
+                    <p> It a shopping page with the logic of adding & removing an item from cart</p>
+                    <span class="btn-view">View Project</span>
+                </div>
+            </a>
+            <a href="webassign/web%205/project%201/index.html" class="project-card" target="_blank">
+                <div class="screenshot-area">
+                    <img src="images/p13.png" alt="Screenshot of Project 3: To-Do App">
+                </div>
+                <div class="project-content">
+                    <h3>Stop Watch</h3>
+                    <p>It a simple stop watch  javacript page </p>
+                    <span class="btn-view">View Project</span>
+                </div>
+            </a>
+            <a href="webassign/web%205/project%202/index.html" class="project-card" target="_blank">
+                <div class="screenshot-area">
+                    <img src="images/p14.png" alt="Screenshot of Project 3: To-Do App">
+                </div>
+                <div class="project-content">
+                    <h3>To-Do App</h3>
+                    <p>A simple, state-managed To-Do application built using javascript,css & html</p>
+                    <span class="btn-view">View Project</span>
+                </div>
+            </a>
+            <a href="js_class_work/jsbkTEST/index.html" class="project-card" target="_blank">
+                <div class="screenshot-area">
+                    <img src="images/p15.png" alt="Screenshot of Project 3: To-Do App">
+                </div>
+                <div class="project-content">
+                    <h3>Background changer</h3>
+                    <p>It a random background-color changer using javascript</p>
+                    <span class="btn-view">View Project</span>
+                </div>
+            </a>
+            <a href="js_class_work/jstest/index.html" class="project-card" target="_blank">
+                <div class="screenshot-area">
+                    <img src="images/p16.png" alt="Screenshot of Project 3: To-Do App">
+                </div>
+                <div class="project-content">
+                    <h3>An animation of My Name</h3>
+                    <p>A simple CSS animation of my Name</p>
+                    <span class="btn-view">View Project</span>
+                </div>
+            </a>
+            <a href="js_class_work/jsTEST%203/index.html" class="project-card" target="_blank">
+                <div class="screenshot-area">
+                    <img src="images/p17.png" alt="Screenshot of Project 3: To-Do App">
+                </div>
+                <div class="project-content">
+                    <h3>Hovering app</h3>
+                    <p>This is a page that implements css Hovering property .</p>
+                    <span class="btn-view">View Project</span>
+                </div>
+            </a>
+
+            <a href="js_class_work/jsTEST%204/index.html" class="project-card" target="_blank">
+                <div class="screenshot-area">
+                    <img src="images/p18.png" alt="Screenshot of Project 3: To-Do App">
+                </div>
+                <div class="project-content">
+                    <h3>Names Concate</h3>
+                    <p>It a page that joins two inputs together.</p>
+                    <span class="btn-view">View Project</span>
+                </div>
+            </a>
+            <a href="ADD2NUMBERS/index.html" class="project-card" target="_blank">
+                <div class="screenshot-area">
+                    <img src="images/p19.png" alt="Screenshot of Project 3: To-Do App">
+                </div>
+                <div class="project-content">
+                    <h3>Javascript <b>Alert</b> page</h3>
+                    <p>A simple, alert prompt made using javascript</p>
+                    <span class="btn-view">View Project</span>
+                </div>
+            </a>
+            <a href="extraclass/index.html" class="project-card" target="_blank">
+                <div class="screenshot-area">
+                    <img src="images/p20.png" alt="Screenshot of Project 3: To-Do App">
+                </div>
+                <div class="project-content">
+                    <h3>A registgration Form</h3>
+                    <p>A professional registration form using only css and html</p>
+                    <span class="btn-view">View Project</span>
+                </div>
+            </a>
+            <a href="table/index.html" class="project-card" target="_blank">
+                <div class="screenshot-area">
+                    <img src="images/p21.png" alt="Screenshot of Project 3: To-Do App">
+                </div>
+                <div class="project-content">
+                    <h3>A simple table</h3>
+                    <p>This is a simple table, using the <b>html table tag</b></p>
+                    <span class="btn-view">View Project</span>
+                </div>
+            </a>
+
+            </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Banahene Emmanuel Adamnor  Index No: 2425402521. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
