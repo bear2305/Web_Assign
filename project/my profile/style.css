@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --primary: #4361ee;
+    --primary-dark: #3a56d4;
+    --secondary: #3a0ca3;
+    --bg-light: #f5f7ff;
+    --white: #ffffff;
+    --text-dark: #1a1b1e;
+    --shadow: rgba(0, 0, 0, 0.15);
+}
+
+body {
+    background-color: var(--bg-light);
+    font-family: Arial, sans-serif;
+    color: var(--text-dark);
+}
+
+div {
+    display: grid;
+    grid-template-areas:
+        "H H H N"
+        "M M M M"
+        "M M M M"
+        "F F F F";
+}
+
+
+header {
+    grid-area: H;
+    width: 70vw;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--white);
+    box-shadow: 0 4px 12px var(--shadow);
+    border-radius: 0 0 10px 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+header b {
+    color: var(--primary);
+}
+
+
+nav {
+    width: 30vw;
+    height: 8vh;
+    grid-area: N;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--white);
+    border-radius: 0 0 10px 10px;
+}
+
+
+.al {
+    text-decoration: none;
+    background-color: var(--primary);
+    color: var(--white);
+    border-radius: 25px;
+    width: 100px;
+    text-align: center;
+    margin: 10px;
+    padding: 8px 5px;
+    box-shadow: 0 5px 10px var(--shadow);
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+.al:hover {
+    transform: translateY(-3px);
+    background-color: var(--primary-dark);
+    cursor: pointer;
+}
+
+.al:active {
+    transform: scale(0.95);
+    background-color: var(--secondary);
+    color: #e0e0ff;
+}
+
+
+main {
+    grid-area: M;
+    height: 80vh;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+
+.m_r {
+    align-self: center;
+    background-color: var(--white);
+    border-radius: 20px 60px 40px 80px;
+    width: 45vw;
+    padding: 20px;
+    box-shadow: 0 8px 20px var(--shadow);
+}
+
+#imgb {
+    width: 315px;
+    height: 400px;
+    border-radius: 20%;
+    object-fit: cover;
+    box-shadow: 0 5px 15px var(--shadow);
+}
+
+.Ab {
+    align-self: center;
+    padding: 25px;
+    width: 45vw;
+    height: 45vh;
+    background: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px var(--shadow);
+}
+
+.Ab h1 {
+    color: var(--primary);
+    font-size: 2rem;
+    text-align: center;
+}
+
+.Ab p {
+    font-size: 1.1rem;
+    margin-top: 15px;
+    line-height: 1.7;
+}
+
+
+footer {
+    grid-area: F;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--white);
+    box-shadow: 0 -4px 12px var(--shadow);
+    font-size: 0.95rem;
+}
