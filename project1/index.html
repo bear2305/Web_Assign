@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Add Two Numbers</h2>
+    <input type="number" id="num1" placeholder="First Number" value="">
+    <input type="number" id="num2" placeholder="Second Number">
+    <button onclick="addNumbers()">Add</button>
+    <input type="number" id="result2" placeholder="Second number" readonly>
+    <p id="result" style="color:red"></p>
+
+    <script>
+        function addNumbers(){
+        let nam1= parseFloat(document.getElementsById("num1").value);
+        let nam2= parseFloat(document.getElementsById("num2").value);
+        document.getElementById('result').innerHTML=sum;
+        document.getElementById('result2').value=sum;}
+    </script>
+</body>
+</html>
