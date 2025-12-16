@@ -1,7 +1,7 @@
 const products = [
-  { id: 1, name: "T-Shirt", price: 50, image: "images/image1.jpg" },
-  { id: 2, name: "Mug", price: 30, image: "images/image2.jpg" },
-  { id: 3, name: "Notebook", price: 20, image: "images/image3.jpg" }
+  { id: 1, name: "T-Shirt", price: 50, image: "images/kali.jpg" },
+  { id: 2, name: "Mug", price: 30, image: "images/mug.jpg" },
+  { id: 3, name: "Notebook", price: 20, image: "images/notes.jpg" }
 ];
 
 let cart = [];
@@ -84,3 +84,4 @@ document.getElementById("checkout-btn").addEventListener("click", () => {
 
 // LOAD PRODUCTS WHEN PAGE LOADS
 renderProducts();
+
