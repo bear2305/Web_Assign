@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background:url("download.jpg");
+    width: 100vw;
+    height: 100vh; /* Use full viewport height */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container{
+    background: white;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 380px;
+}
+
+.login-header{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.login-header h2 {
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 28px;
+}
+
+.login-header p {
+    color: #777;
+    font-size: 14px;
+}
+.form-group {
+    margin-bottom: 20px;
+    position:relative;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    outline: none;
+}
+.form-group input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102,126,234, 0.1);
+}
+.form-group label {
+    position: absolute;
+    left: 15px;
+    top: 14px;
+    color: #999;
+    font-size: 15px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    background: white;
+    padding: 0 5px;
+}
+   /*Floating label effect */
+.form-group input:focus ~ label,
+.form-group input:valid ~ label {
+    top: -8px;
+    font-size: 12px;
+    color: #667eea;
+}    

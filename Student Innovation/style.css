@@ -1,0 +1,136 @@
+/* Importing a professional font for better look */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif; /* Use a modern, professional font */
+}
+
+/* --- Global & Container Styles --- */
+
+:root {
+    --primary-color: #002D62; /* Deep Navy Blue */
+    --accent-color: #00BCD4; /* Vibrant Cyan/Teal */
+    --text-light: #f4f4f4;
+    --text-dark: #333333;
+}
+
+body {
+    background-color: #e9ecef; /* Light gray background for the body */
+}
+
+.container {
+    background-image: url("inoimg.jpeg");
+    width: 100vw;
+    height: 100vh; /* Use full viewport height */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Needed for header positioning */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Optional: Add a subtle overlay to make text/buttons stand out */
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Darker overlay */
+    z-index: 1;
+}
+
+/* --- Header & Navigation --- */
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: rgba(0, 0, 0, 0.6); /* Slightly transparent dark background for header */
+    color: var(--text-light);
+    z-index: 2; /* Keep header above the overlay */
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--accent-color);
+}
+
+.btn-nav {
+    display: flex;
+    gap: 15px; /* Spacing between buttons */
+}
+
+.nav-btn {
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; /* Slightly rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: var(--text-light);
+}
+
+/* Specific button styles */
+.login, .signup {
+    background-color: transparent; /* Transparent background for less visual weight */
+    border: 2px solid var(--text-light); /* White border */
+}
+
+.register {
+    background-color: var(--accent-color); /* Highlight the main CTA */
+    color: var(--primary-color);
+    border: 2px solid var(--accent-color);
+}
+
+/* Hover effects */
+.nav-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-1px);
+}
+
+.register:hover {
+    background-color: #0097A7; /* Slightly darker accent on hover */
+    border-color: #0097A7;
+}
+
+/* --- Hero Content (Image) --- */
+
+.hero-content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-start; /* Move content to the left */
+    align-items: center;
+    padding-left: 10%; /* Add some margin from the edge */
+    z-index: 2;
+}
+
+.img1 img {
+    max-width: 350px; /* Control image size */
+    height: auto;
+    border-radius: 8px; /* Slightly rounded corners for the inner image */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow for depth */
+    display: block; /* Removes any default bottom margin */
+}
+
+/* --- Footer --- */
+
+footer {
+    background-color: var(--primary-color); /* Use the professional Navy color */
+    padding: 15px 40px;
+    font-size: 0.75rem; /* Slightly larger and more legible */
+    color: #aebfd0; /* Lighter color for legibility on dark background */
+    text-align: center;
+    z-index: 2;
+    margin-top: auto; /* Pushes the footer to the bottom */
+}

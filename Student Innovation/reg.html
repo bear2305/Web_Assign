@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovation Event Registration</title>
+    <style>
+        /* Basic Styling for readability and structure */
+        body {
+     background:url("dwn1.jpg");
+      width: 100vw;
+    height: 100vh; /* Use full viewport height */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+          
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Ensures padding doesn't affect overall width */
+        }
+        .radio-group label, .checkbox-group label {
+            display: inline-block;
+            margin-right: 15px;
+            font-weight: normal;
+        }
+        .hidden-section {
+            display: none;
+            border-left: 5px solid #ffc107;
+            padding-left: 15px;
+            margin-top: 20px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+    <script>
+        // Simple JavaScript to show/hide the innovation section
+        function toggleInnovationSection() {
+            var roleSelect = document.getElementById('role');
+            var innovationSection = document.getElementById('innovationSection');
+            if (roleSelect.value === 'innovator') {
+                innovationSection.style.display = 'block';
+            } else {
+                innovationSection.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div class="container">
+    <h1>Innovation Event Registration</h1>
+    <p>Please fill out the form below to secure your spot.</p>
+
+    <form action="/submit_registration" method="POST">
+        
+        <h2>1. Attendee Information</h2>
+
+        <div class="form-group">
+            <label for="fullName">Full Name *</label>
+            <input type="text" id="fullName" name="fullName" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone">
+        </div>
+
+        <div class="form-group">
+            <label for="company">Company / Organization</label>
+            <input type="text" id="company" name="company">
+        </div>
+
+        <div class="form-group">
+            <label for="role">Registration Role *</label>
+            <select id="role" name="role" required onchange="toggleInnovationSection()">
+                <option value="">-- Select your role --</option>
+                <option value="attendee">General Attendee</option>
+                <option value="speaker">Speaker</option>
+                <option value="innovator">Innovator / Exhibitor</option>
+                <option value="media">Media / Press</option>
+            </select>
+        </div>
+
+        <h2>2. Logistics & Preferences</h2>
+
+        <div class="form-group">
+            <label for="pass">Event Pass Selection *</label>
+            <select id="pass" name="pass" required>
+                <option value="full">Full Event Pass (3 Days)</option>
+                <option value="vip">VIP Access Pass</option>
+                <option value="day1">Day 1 Only</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Dietary Restrictions</label>
+            <div class="checkbox-group">
+                <input type="checkbox" id="none" name="diet[]" value="None"> <label for="none">None</label>
+                <input type="checkbox" id="vegetarian" name="diet[]" value="Vegetarian"> <label for="vegetarian">Vegetarian</label>
+                <input type="checkbox" id="vegan" name="diet[]" value="Vegan"> <label for="vegan">Vegan</label>
+                <input type="checkbox" id="glutenFree" name="diet[]" value="Gluten-Free"> <label for="glutenFree">Gluten-Free</label>
+                <input type="checkbox" id="otherDiet" name="diet[]" value="Other"> <label for="otherDiet">Other (Please specify in comments)</label>
+            </div>
+        </div>
+        
+        <div id="innovationSection" class="hidden-section">
+            <h2>3. Innovation/Exhibitor Details</h2>
+            <p>Please provide details about the innovation you are submitting or exhibiting.</p>
+
+            <div class="form-group">
+                <label for="innovationName">Innovation/Product Name *</label>
+                <input type="text" id="innovationName" name="innovationName">
+            </div>
+
+            <div class="form-group">
+                <label for="description">Brief Description (Max 200 words) *</label>
+                <textarea id="description" name="description" rows="4" maxlength="1500"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="status">Development Status *</label>
+                <select id="status" name="status">
+                    <option value="prototype">Working Prototype</option>
+                    <option value="marketReady">Ready to Market</option>
+                    <option value="commercial">Commercial Product</option>
+                    <option value="concept">Concept/Idea</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <input type="checkbox" id="consent" name="consent" required>
+            <label for="consent">I agree to the <a href="#">Terms and Conditions</a> and Privacy Policy. *</label>
+        </div>
+
+        <button type="submit">Complete Registration</button>
+    </form>
+</div>
+
+</body>
+</html>
